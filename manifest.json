@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AI Video Check",
+  "version": "0.1.0",
+  "description": "Checks whether the video you're watching is likely AI-generated.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "AI Video Check",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

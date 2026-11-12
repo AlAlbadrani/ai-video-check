@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AI Video Check – Settings</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+  <h1>AI Video Check – Settings</h1>
+
+  <section>
+    <h2>Detection service (Sightengine)</h2>
+    <p class="muted">Create a free account at sightengine.com, then copy the API user and API secret from your dashboard.</p>
+    <label>API user <input id="apiUser" autocomplete="off"></label>
+    <label>API secret <input id="apiSecret" type="password" autocomplete="off"></label>
+    <button id="test">Test keys</button>
+    <span id="testResult" class="muted"></span>
+  </section>
+
+  <section>
+    <h2>Scanning</h2>
+    <label class="row"><input type="checkbox" id="autoScan"> Scan videos automatically when they start playing</label>
+    <label>Max automatic scans per day <input id="dailyCap" type="number" min="0" max="1000"></label>
+    <label>Frames per scan (1–5) <input id="framesPerScan" type="number" min="1" max="5"></label>
+    <p class="muted small">Each frame is one API call. 3 frames × 30 scans = up to 90 calls a day.</p>
+  </section>
+
+  <button id="save" class="primary">Save</button>
+  <span id="saved" class="muted"></span>
+
+  <script src="options.js"></script>
+</body>
+</html>

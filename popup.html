@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <h1>AI Video Check</h1>
+  <p id="keyWarning" class="warn" hidden>No API key yet. <a href="#" id="setupLink">Set it up</a></p>
+  <label class="row">
+    <input type="checkbox" id="autoScan">
+    Scan videos automatically
+  </label>
+  <p class="muted" id="usage">…</p>
+  <p class="muted small">Click the badge on any video to check it manually.</p>
+  <button id="openOptions">Settings</button>
+  <script src="popup.js"></script>
+</body>
+</html>
